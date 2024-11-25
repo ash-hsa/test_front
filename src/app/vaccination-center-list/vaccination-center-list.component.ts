@@ -24,7 +24,9 @@ export class VaccinationCenterListComponent {
   }
 
   ngOnInit() : void{
-    this.centers = this.service.getAllVaccinationCenter();
+    this.service.getAllVaccinationCenter().subscribe(resultCenters=>{
+      this.centers=resultCenters;
+    });
   }
 
   onDelete(center:VaccinationCenter){

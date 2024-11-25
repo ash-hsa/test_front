@@ -67,6 +67,7 @@
               "buildTarget": "vaccination-app:build:production"
             },
             "development": {
+              "proxyConfig": "src/proxy.conf.json",
               "buildTarget": "vaccination-app:build:development"
             }
           },
